@@ -55,6 +55,7 @@
     "career-profile": "node career-profile.mjs",
     "add": "node add-entry.mjs",
     "reposts": "node detect-reposts.mjs",
+    "filter-audit": "node filter-audit.mjs --summary",
     "digest": "node weekly-digest.mjs",
     "freshness": "node check-table-freshness.mjs",
     "jd-archive": "node check-jd-archive.mjs",

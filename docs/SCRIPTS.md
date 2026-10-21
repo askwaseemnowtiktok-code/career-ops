@@ -56,6 +56,8 @@ All scripts live in the project root as `.mjs` modules. Most are exposed via
 | `node fix-slugs.mjs` | `fix-slugs.mjs` | Write `verify-portals.mjs`'s suggested ATS slug fixes back to portals.yml (dry run by default, `--fix` to write) |
 | `node audit-portals.mjs` | `audit-portals.mjs` | Audit what each portals.yml board actually serves — provider, posting count, sample titles — not just whether it answers (network; `--baseline` diffs against an earlier `--json` run) |
 | `npm run reposts` | `detect-reposts.mjs` | Flag re-listed (ghost) postings from scan history |
+| `npm run filter-audit` | `filter-audit.mjs` | Show which `title_filter.positive` keywords never match, add nothing, or bring mostly low-scored offers, replayed over scan history (read-only) |
+| `node coverage-check.mjs <url> --company <name> --title <title>` | `coverage-check.mjs` | Explain why the scanners missed a posting you found by hand, and propose the `portals.yml` change that would have caught it (read-only, zero-network) |
 | `node rank-pipeline.mjs` | `rank-pipeline.mjs` | Opt-in LLM relevance re-ranker — annotates pending pipeline rows with a score + reason (off by default) |
 | `npm run gemini:eval` | `gemini-eval.mjs` | Evaluate a JD with Google Gemini (free-tier alternative) |
 | `npm run ollama:eval` | `ollama-eval.mjs` | Evaluate a JD with a local Ollama model |
@@ -1163,6 +1165,47 @@ within a 90-day window — a strong ghost-job / re-listing signal.
 ```bash
 npm run reposts                 # JSON
 node detect-reposts.mjs --summary
+```
+
+---
+
+## filter-audit
+
+Audit of `title_filter.positive` in `portals.yml`. Replays the scanner's own
+keyword matching over the offers in `data/scan-history.tsv` that passed the
+title filter, and joins them with the scores in `reports/`. For each keyword
+it reports `hits` and `unique` (offers no other keyword catches), and flags:
+
+- **dead** — matches nothing in the history;
+- **redundant** — has hits but zero `unique`, so removing it loses no offer;
+- **noisy** — 5+ hits whose evaluated offers average below 2.5.
+
+Rank keywords by `unique`, not `hits`. The audit reads only the positive list:
+offers that `title_filter.negative` or `location_filter` already drop still
+count. Duplicate entries are audited once and listed. Read-only, zero-LLM.
+
+```bash
+npm run filter-audit            # human-readable summary
+node filter-audit.mjs           # JSON
+```
+
+---
+
+## coverage-check
+
+For a posting you found by hand: explains why the scanners did not surface
+it, and proposes the one `portals.yml` change that would have caught it. The
+verdict is one of: already surfaced, seen and dropped by a filter, tracked
+but disabled, tracked with no provider, tracked but dropped by the title or
+location filter, tracked but not seen yet, company not tracked, or company not
+tracked and its job site read by no provider. Zero-network: it reads `portals.yml`,
+`data/scan-history.tsv`, `data/pipeline.md` and the cached reverse-sweep
+company lists. It never edits `portals.yml`.
+
+```bash
+node coverage-check.mjs <url> --company "Acme" --title "QA Engineer" [--location "Berlin"]
+node coverage-check.mjs <url> ... --log [--note "agency posting"]   # also append to data/coverage-misses.tsv
+node coverage-check.mjs <url> ... --json                            # machine-readable verdict
 ```
 
 ---
