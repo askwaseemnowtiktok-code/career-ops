@@ -626,7 +626,7 @@ Go 대시보드 TUI, Node.js 스크립트, AI 에이전트 모드 모두 이 결
 career-ops([career-ops.org](https://career-ops.org), **careerops**라고도 부릅니다)는 당신의 AI 코딩 CLI(Claude Code, Codex, OpenCode 등) 안에서 로컬로 실행되는 오픈 소스 AI 구직 도구로, 모든 결정을 당신에게 맡깁니다. 이력서 기준으로 채용 공고를 평가하고, ATS 맞춤 PDF를 생성하고, 연락할 적임자를 찾고, 모든 것을 한곳에서 추적합니다: 최종 결정은 항상 당신의 몫입니다. [CareerOps 매니페스토](https://career-ops.org/manifesto)의 첫 번째 참조 구현입니다.
 
 **맞춤 이력서가 없는 내용을 지어낼 수 있나요?**
-그래서는 안 되며, 프롬프트에도 그렇게 적혀 있습니다: 다듬되, 절대 지어내지 않는다. `generate-pdf`는 당신의 원본 자료에 없는 숫자나 사실이 담긴 이력서를 막습니다(`--skip-fact-check`를 넘기지 않는 한). 직함 확인이나 바꿔 쓴 표현의 판단은 아직 하지 않습니다. 열려 있는 이슈 두 개가 이를 추적합니다: [#2677](https://github.com/career-ops-hq/career-ops/issues/2677) (직함은 cv.md와 일치해야 함), [#1411](https://github.com/career-ops-hq/career-ops/issues/1411) (실패 시 차단하는 충실도 검사). 이슈가 병합될 때까지는 보내기 전에 모든 이력서를 읽어보세요. [법적 고지](LEGAL_DISCLAIMER.md)에도 같은 내용이 더 길게 적혀 있습니다.
+그래서는 안 되며, 프롬프트에도 그렇게 적혀 있습니다: 다듬되, 절대 지어내지 않는다. `generate-pdf`는 당신의 원본 자료에 없는 숫자나 사실이 담긴 이력서를 막습니다(`--skip-fact-check`를 넘기지 않는 한). `pdf` 모드는 `cv-title-check.mjs`도 실행합니다. 맞춤 이력서의 각 직함을 cv.md에 적힌 같은 경력(회사와 기간으로 대조)의 직함과 비교하고, 다른 것이 있으면 유지할지 되돌릴지 묻습니다. 직함을 달리 표현하는 것이 당신의 선택일 때도 있으므로 경고만 하고 막지는 않습니다. 바꿔 쓴 표현을 판단하는 검사는 아직 없습니다: [#1411](https://github.com/career-ops-hq/career-ops/issues/1411) (실패 시 차단하는 충실도 검사)이 이를 추적합니다. 그때까지는 보내기 전에 모든 이력서를 읽어보세요. [법적 고지](LEGAL_DISCLAIMER.md)에도 같은 내용이 더 길게 적혀 있습니다.
 
 **career-ops를 무료로, 또는 더 저렴한 모델이나 로컬 모델로 쓸 수 있나요?**
 네. career-ops는 CLI에 종속되지 않으며 무료 및 로컬 모델(OpenRouter 무료 모델, Ollama, 또는 OpenAI 호환 엔드포인트)에서 실행되므로 유료 구독에 묶이지 않습니다. 전체 설정은 [docs/RUNNING_ON_A_BUDGET.md](docs/RUNNING_ON_A_BUDGET.md)를 참고하세요.

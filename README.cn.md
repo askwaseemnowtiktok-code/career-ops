@@ -628,7 +628,7 @@ Go 版仪表板 TUI、Node.js 脚本和 AI 代理模式都会自动遵循这一�
 career-ops（[career-ops.org](https://career-ops.org)，也称 **careerops**） 是一个开源的 AI 求职工具，在你的 AI 编码 CLI（Claude Code、Codex、OpenCode 等）里本地运行，把每一个决定都留给你。它根据你的简历评估职位，生成适配 ATS 的 PDF，找到合适的联系人，并在一个地方追踪所有进展：最终决定始终在你手中。它是 [CareerOps 宣言](https://career-ops.org/manifesto)的首个参考实现。
 
 **定制简历会编造内容吗？**
-不应该，提示词里也这么写：只改写，绝不编造。`generate-pdf` 会拦下数字或事实在你的资料来源中找不到的简历，除非你传入 `--skip-fact-check`。它目前还不检查职位名称，也不评判改写。两个未关闭的 issue 在跟进这些：[#2677](https://github.com/career-ops-hq/career-ops/issues/2677)（职位名称必须与 cv.md 一致）和 [#1411](https://github.com/career-ops-hq/career-ops/issues/1411)（不通过即阻止的真实性检查）。在它们合并之前，每份简历发出前都请自己读一遍。[法律声明](LEGAL_DISCLAIMER.md) 用更长的篇幅说了同样的话。
+不应该，提示词里也这么写：只改写，绝不编造。`generate-pdf` 会拦下数字或事实在你的资料来源中找不到的简历，除非你传入 `--skip-fact-check`。`pdf` 模式还会运行 `cv-title-check.mjs`：它按公司和日期，把定制简历中的每个职位名称与 cv.md 中同一份工作的职位名称对比，有不同就请你决定保留还是改回。它只提醒、不拦截，因为调整职位名称的写法有时是你自己的选择。目前还没有任何检查评判改写：[#1411](https://github.com/career-ops-hq/career-ops/issues/1411)（不通过即阻止的真实性检查）在跟进这一点。在此之前，每份简历发出前都请自己读一遍。[法律声明](LEGAL_DISCLAIMER.md) 用更长的篇幅说了同样的话。
 
 **我可以免费运行 career-ops，或使用更便宜的本地模型吗？**
 可以。career-ops 不受特定 CLI 限制，可以用免费和本地模型运行（OpenRouter 免费模型、Ollama 或任何兼容 OpenAI 的端点），因此你不必绑定付费订阅。完整设置见 [docs/RUNNING_ON_A_BUDGET.md](docs/RUNNING_ON_A_BUDGET.md)。

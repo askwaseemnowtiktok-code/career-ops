@@ -628,7 +628,7 @@ Go 版儀表板 TUI、Node.js 腳本和 AI 代理模式都會自動遵循這個�
 career-ops（[career-ops.org](https://career-ops.org)，也稱 **careerops**） 是一個開源的 AI 求職工具，在你的 AI 程式碼 CLI（Claude Code、Codex、OpenCode 等）裡於本機執行，把每一個決定都留給你。它依你的履歷評估職缺、產生適配 ATS 的 PDF、找出該聯絡的對象，並在一個地方追蹤所有進度：最終決定權永遠在你手上。它是 [CareerOps 宣言](https://career-ops.org/manifesto)的第一個參考實作。
 
 **客製化履歷會捏造內容嗎？**
-不應該，提示詞裡也這麼寫：只改寫，絕不捏造。`generate-pdf` 會擋下數字或事實在你的資料來源中找不到的履歷，除非你傳入 `--skip-fact-check`。它目前還不檢查職稱，也不評判改寫。兩個未關閉的 issue 在追蹤這些：[#2677](https://github.com/career-ops-hq/career-ops/issues/2677)（職稱必須與 cv.md 一致）和 [#1411](https://github.com/career-ops-hq/career-ops/issues/1411)（不通過即阻止的真實性檢查）。在它們合併之前，每份履歷送出前都請自己讀一遍。[法律聲明](LEGAL_DISCLAIMER.md) 用更長的篇幅說了同樣的話。
+不應該，提示詞裡也這麼寫：只改寫，絕不捏造。`generate-pdf` 會擋下數字或事實在你的資料來源中找不到的履歷，除非你傳入 `--skip-fact-check`。`pdf` 模式還會執行 `cv-title-check.mjs`：它依公司和日期，把客製化履歷中的每個職稱與 cv.md 中同一份工作的職稱比對，有不同就請你決定保留還是改回。它只提醒、不阻擋，因為調整職稱的寫法有時是你自己的選擇。目前還沒有任何檢查評判改寫：[#1411](https://github.com/career-ops-hq/career-ops/issues/1411)（不通過即阻止的真實性檢查）在追蹤這一點。在此之前，每份履歷送出前都請自己讀一遍。[法律聲明](LEGAL_DISCLAIMER.md) 用更長的篇幅說了同樣的話。
 
 **我可以免費執行 career-ops，或改用較便宜／本機的模型嗎？**
 可以。career-ops 不綁定特定 CLI，也能跑在免費與本機模型上（OpenRouter 的免費模型、Ollama，或任何相容 OpenAI 的端點），所以你不必被付費訂閱綁住。完整設定見 [docs/RUNNING_ON_A_BUDGET.md](docs/RUNNING_ON_A_BUDGET.md)。
