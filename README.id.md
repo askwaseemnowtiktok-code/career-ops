@@ -230,17 +230,8 @@ npx playwright install chromium   # hanya diperlukan untuk pembuatan PDF
 # package manager distro Anda jika pembuatan PDF gagal membuka browser
 # (dokumentasi resmi Playwright mencantumkan daftar library yang dibutuhkan untuk tiap platform).
 
-# 2. Periksa instalasi
-npm run doctor                    # Memvalidasi semua prasyarat sistem
-
-# 3. Konfigurasi
-cp config/profile.example.yml config/profile.yml  # Edit sesuai detail profil Anda
-cp templates/portals.example.yml portals.yml       # Sesuaikan daftar perusahaan
-
-# 4. Tambahkan CV Anda
-# Buat file cv.md di root proyek berisi CV Anda dalam format Markdown
-
-# 5. Buka AI CLI Anda di direktori ini
+# 2. Buka AI CLI Anda di direktori ini. Saat pertama kali dijalankan, CLI akan
+#    memandu penyiapan (CV, profil, dan target peran Anda) lewat obrolan
 claude   # atau codex / opencode / qwen / agy / grok
 
 # Lalu minta CLI Anda untuk menyesuaikan sistem dengan kebutuhan Anda:
@@ -249,7 +240,7 @@ claude   # atau codex / opencode / qwen / agy / grok
 # "Add these 5 companies to portals.yml"
 # "Update my profile with this CV I'm pasting"
 
-# 6. Mulai gunakan
+# 3. Mulai gunakan
 # Tempel URL lowongan atau teks JD untuk memicu auto-pipeline
 # Jika CLI Anda mendukung slash command, gunakan /career-ops (atau alias spesifik CLI tersebut)
 # Di Codex, minta mode yang sama menggunakan bahasa sehari-hari, misalnya:
