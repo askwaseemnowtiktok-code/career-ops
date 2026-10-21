@@ -506,7 +506,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Features: 6 வடிகட்டி tabs, 4 வரிசைப்படுத்தும் முறைகள், grouped/flat view, lazy-loaded previews, inline நிலை மாற்றங்கள்.
+Features: 10 வடிகட்டி tabs, 8 வரிசைப்படுத்தும் முறைகள், grouped/flat view, lazy-loaded previews, inline நிலை மாற்றங்கள்.
 
 **சோதனை web UI**-யும் உள்ளது (alpha மற்றும் opt-in: நீங்கள் தொடங்காதவரை எதுவும் இயங்காது): [`web/README.md`](web/README.md) பார்க்கவும்.
 

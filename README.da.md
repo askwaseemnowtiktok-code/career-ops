@@ -506,7 +506,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Funktioner: 6 filterfaner, 4 sorteringstilstande, grupperet/flad visning, forhåndsvisninger med lazy loading, statusændringer inline.
+Funktioner: 10 filterfaner, 8 sorteringstilstande, grupperet/flad visning, forhåndsvisninger med lazy loading, statusændringer inline.
 
 Der findes også en **eksperimentel web-UI** (alfa og tilvalg: intet kører, medmindre du starter den): se [`web/README.md`](web/README.md).
 

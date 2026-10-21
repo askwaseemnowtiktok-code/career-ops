@@ -506,7 +506,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-機能：6 つのフィルタータブ、4 種類のソートモード、グループ表示／フラット表示、遅延読み込みのプレビュー、インラインでのステータス変更。
+機能：10 個のフィルタータブ、8 種類のソートモード、グループ表示／フラット表示、遅延読み込みのプレビュー、インラインでのステータス変更。
 
 **実験的な Web UI** もあります（アルファ版かつオプトイン：自分で起動しない限り何も動きません）：[`web/README.md`](web/README.md) を参照してください。
 

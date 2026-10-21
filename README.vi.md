@@ -512,7 +512,7 @@ npm run serve:dashboard   # chạy TUI
 npm run build:dashboard   # tùy chọn: build binary độc lập
 ```
 
-Tính năng: 6 tab lọc, 4 kiểu sắp xếp, chế độ nhóm/phẳng, xem trước tải lười, đổi trạng thái ngay trong danh sách.
+Tính năng: 10 tab lọc, 8 kiểu sắp xếp, chế độ nhóm/phẳng, xem trước tải lười, đổi trạng thái ngay trong danh sách.
 
 Ngoài ra còn có một **giao diện web thử nghiệm** (alpha và tùy chọn: không gì chạy trừ khi bạn khởi động): xem [`web/README.md`](web/README.md).
 

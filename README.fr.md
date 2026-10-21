@@ -508,7 +508,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Fonctionnalités : 6 onglets de filtre, 4 modes de tri, vue groupée ou à plat, aperçus en chargement différé, changements de statut en ligne.
+Fonctionnalités : 10 onglets de filtre, 8 modes de tri, vue groupée ou à plat, aperçus en chargement différé, changements de statut en ligne.
 
 Il existe aussi une **interface web expérimentale** (alpha et optionnelle : rien ne tourne tant que tu ne la lances pas) : voir [`web/README.md`](web/README.md).
 

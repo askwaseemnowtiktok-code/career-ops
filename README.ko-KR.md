@@ -506,7 +506,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-기능: 6개의 필터 탭, 4가지 정렬 모드, 그룹/플랫 보기, 지연 로딩 미리보기, 인라인 상태 변경.
+기능: 10개의 필터 탭, 8가지 정렬 모드, 그룹/플랫 보기, 지연 로딩 미리보기, 인라인 상태 변경.
 
 **실험적인 웹 UI**도 있습니다(알파이자 옵트인: 직접 시작하지 않으면 아무것도 실행되지 않음). [`web/README.md`](web/README.md)를 참고하세요.
 

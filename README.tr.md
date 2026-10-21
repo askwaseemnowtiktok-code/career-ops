@@ -506,7 +506,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Özellikler: 6 filtre sekmesi, 4 sıralama modu, gruplu/düz görünüm, tembel yüklenen önizlemeler, satır içi durum değişiklikleri.
+Özellikler: 10 filtre sekmesi, 8 sıralama modu, gruplu/düz görünüm, tembel yüklenen önizlemeler, satır içi durum değişiklikleri.
 
 Ayrıca **deneysel bir web arayüzü** de var (alfa ve isteğe bağlı: sen başlatmadıkça hiçbir şey çalışmaz): bkz. [`web/README.md`](web/README.md).
 

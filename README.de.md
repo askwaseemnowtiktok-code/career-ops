@@ -508,7 +508,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Features: 6 Filter-Tabs, 4 Sortiermodi, gruppierte/flache Ansicht, Vorschauen mit Lazy Loading, Statusänderungen inline.
+Features: 10 Filter-Tabs, 8 Sortiermodi, gruppierte/flache Ansicht, Vorschauen mit Lazy Loading, Statusänderungen inline.
 
 Es gibt außerdem eine **experimentelle Web-UI** (Alpha und opt-in: Nichts läuft, solange du sie nicht startest): siehe [`web/README.md`](web/README.md).
 

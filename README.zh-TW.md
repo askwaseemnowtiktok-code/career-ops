@@ -508,7 +508,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-功能：6 個篩選分頁、4 種排序模式、分組／平鋪檢視、延遲載入預覽、行內狀態修改。
+功能：10 個篩選分頁、8 種排序模式、分組／平鋪檢視、延遲載入預覽、行內狀態修改。
 
 還有一個**實驗性的 Web UI**（alpha 版，選用：除非你主動啟動，否則不會執行任何東西）：見 [`web/README.md`](web/README.md)。
 

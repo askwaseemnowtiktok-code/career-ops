@@ -531,7 +531,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Funkcje: 6 zakładek filtrów, 4 tryby sortowania, widok zgrupowany/płaski, podglądy ładowane leniwie, zmiany statusu w linii.
+Funkcje: 10 zakładek filtrów, 8 trybów sortowania, widok zgrupowany/płaski, podglądy ładowane leniwie, zmiany statusu w linii.
 
 Jest też **eksperymentalny interfejs webowy** (alpha i opt-in: nic nie działa, dopóki go nie uruchomisz): zobacz [`web/README.md`](web/README.md).
 

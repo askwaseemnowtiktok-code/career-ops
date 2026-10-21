@@ -506,7 +506,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Features: 6 फ़िल्टर टैब, 4 सॉर्ट मोड, ग्रुप्ड/फ़्लैट व्यू, लेज़ी-लोडेड प्रीव्यू, इनलाइन स्टेटस बदलाव।
+Features: 10 फ़िल्टर टैब, 8 सॉर्ट मोड, ग्रुप्ड/फ़्लैट व्यू, लेज़ी-लोडेड प्रीव्यू, इनलाइन स्टेटस बदलाव।
 
 एक **प्रायोगिक वेब UI** भी है (अल्फ़ा और वैकल्पिक: जब तक आप शुरू न करें, कुछ नहीं चलता): [`web/README.md`](web/README.md) देखें।
 

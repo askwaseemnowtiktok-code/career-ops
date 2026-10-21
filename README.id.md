@@ -513,7 +513,7 @@ npm run serve:dashboard   # jalankan TUI
 npm run build:dashboard   # opsional: build binary mandiri (standalone)
 ```
 
-Fitur: 6 tab filter, 4 mode pengurutan, tampilan berkelompok/rata (*grouped/flat*), pratinjau *lazy-load*, serta pengubahan status langsung dari daftar (*inline*).
+Fitur: 10 tab filter, 8 mode pengurutan, tampilan berkelompok/rata (*grouped/flat*), pratinjau *lazy-load*, serta pengubahan status langsung dari daftar (*inline*).
 
 Tersedia juga **UI web eksperimental** (masih berstatus *alpha* dan bersifat *opt-in*: tidak ada yang berjalan kecuali Anda menyalakannya sendiri): lihat [`web/README.md`](web/README.md).
 

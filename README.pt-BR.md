@@ -508,7 +508,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-Funcionalidades: 6 abas de filtro, 4 modos de ordenação, visão agrupada ou plana, prévias com carregamento sob demanda, mudanças de status inline.
+Funcionalidades: 10 abas de filtro, 8 modos de ordenação, visão agrupada ou plana, prévias com carregamento sob demanda, mudanças de status inline.
 
 Existe também uma **interface web experimental** (alfa e opcional: nada roda a menos que você inicie): veja [`web/README.md`](web/README.md).
 

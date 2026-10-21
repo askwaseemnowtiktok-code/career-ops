@@ -508,7 +508,7 @@ npm run serve:dashboard   # launch the TUI
 npm run build:dashboard   # optional: build the standalone binary
 ```
 
-功能：6 个筛选标签、4 种排序模式、分组/平铺视图、延迟加载预览、内联状态修改。
+功能：10 个筛选标签、8 种排序模式、分组/平铺视图、延迟加载预览、内联状态修改。
 
 还有一个**实验性的 Web UI**（alpha 版，可选：除非你主动启动，否则不会运行任何东西）：见 [`web/README.md`](web/README.md)。
 
