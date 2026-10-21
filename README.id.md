@@ -273,11 +273,11 @@ Aktifkan *flag* ini **hanya jika *proxy* yang dikonfigurasi memang memblokir kon
 npm i -g @santifer/career-ops
 ```
 
-Perintah ini menginstal *binary* `career-ops` secara global sehingga Anda bisa menjalankannya secara langsung tanpa `npx`. Berbeda dengan `npx @santifer/career-ops init` (yang menyiapkan direktori proyek baru), instalasi global memberi Anda perintah `career-ops` permanen yang dapat dipanggil dari mana saja di terminal Anda.
+Perintah ini menginstal *binary* `career-ops` secara global sehingga Anda bisa menjalankan `career-ops init [folder]` tanpa `npx`. `init` adalah satu-satunya perintahnya: ia menyiapkan *workspace*, dan semua langkah sesudahnya berlangsung di dalam AI coding CLI Anda (lihat Penggunaan di bawah), bukan melalui *binary* ini.
 
 **Mana yang sebaiknya Anda gunakan?**
 - `npx @santifer/career-ops init`: paling pas untuk penggunaan pertama kali; membuatkan folder proyek khusus.
-- `npm i -g @santifer/career-ops`: paling pas setelah Anda memiliki folder proyek dan ingin menjalankan perintah career-ops secara langsung.
+- `npm i -g @santifer/career-ops`: jika Anda lebih suka mengetik `career-ops init` daripada bentuk `npx`. Instalasi ini tidak menambahkan perintah lain.
 
 > **Sistem ini dirancang agar bisa dikustomisasi langsung oleh AI coding CLI Anda.** Mode, arketipe peran, bobot penilaian, hingga skrip negosiasi -- cukup minta AI CLI Anda untuk mengubahnya. Karena ia membaca file yang sama dengan yang ia gunakan, ia tahu persis bagian mana yang harus diedit.
 

@@ -270,11 +270,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-Das installiert die `career-ops`-Binary global, sodass du sie direkt statt über `npx` ausführen kannst. Anders als `npx @santifer/career-ops init` (das ein Projektverzeichnis anlegt) gibt dir die globale Installation einen dauerhaften Befehl `career-ops`, der überall in deinem Terminal verfügbar ist.
+Das installiert die `career-ops`-Binary global, sodass du `career-ops init [folder]` ohne `npx` ausführen kannst. `init` ist ihr einziger Befehl: Er richtet einen Arbeitsbereich ein, und alles Weitere passiert in deiner KI-Coding-CLI (siehe Nutzung unten), nicht über diese Binary.
 
 **Welche Variante solltest du nutzen?**
 - `npx @santifer/career-ops init`: am besten für den ersten Einsatz; legt einen eigenen Projektordner an.
-- `npm i -g @santifer/career-ops`: am besten, sobald du einen Projektordner hast und career-ops-Befehle direkt ausführen willst.
+- `npm i -g @santifer/career-ops`: wenn du lieber `career-ops init` tippst als die `npx`-Form. Weitere Befehle kommen dadurch nicht hinzu.
 
 > **Das System ist dafür gebaut, von deiner KI-Coding-CLI selbst angepasst zu werden.** Modi, Archetypen, Bewertungsgewichte, Verhandlungsskripte: Bitte sie einfach, das zu ändern. Sie liest dieselben Dateien, die sie benutzt, und weiß daher genau, was zu bearbeiten ist.
 

@@ -268,11 +268,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-Det installerer `career-ops`-binæren globalt, så du kan køre den direkte i stedet for via `npx`. I modsætning til `npx @santifer/career-ops init` (som opretter en projektmappe) giver den globale installation dig en permanent `career-ops`-kommando, der er tilgængelig overalt i din terminal.
+Det installerer `career-ops`-binæren globalt, så du kan køre `career-ops init [folder]` uden `npx`. `init` er dens eneste kommando: den opretter et arbejdsområde, og alt derefter foregår i din AI-kodnings-CLI (se Brug nedenfor), ikke gennem denne binær.
 
 **Hvilken skal du bruge?**
 - `npx @santifer/career-ops init`: bedst til første brug; opretter en dedikeret projektmappe.
-- `npm i -g @santifer/career-ops`: bedst, når du har en projektmappe og vil køre career-ops-kommandoer direkte.
+- `npm i -g @santifer/career-ops`: hvis du hellere vil skrive `career-ops init` end `npx`-formen. Den tilføjer ingen andre kommandoer.
 
 > **Systemet er designet til at blive tilpasset af din AI-kodnings-CLI selv.** Tilstande, arketyper, scorevægte, forhandlingsscripts: bed den bare om at ændre dem. Den læser de samme filer, som den bruger, så den ved præcis, hvad den skal redigere.
 

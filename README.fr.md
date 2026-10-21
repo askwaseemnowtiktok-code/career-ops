@@ -270,11 +270,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-Cela installe le binaire `career-ops` globalement pour que tu puisses l'exécuter directement plutôt que via `npx`. Contrairement à `npx @santifer/career-ops init` (qui prépare un dossier de projet), l'installation globale te donne une commande `career-ops` persistante, disponible partout dans ton terminal.
+Cela installe le binaire `career-ops` globalement pour que tu puisses lancer `career-ops init [folder]` sans `npx`. `init` est sa seule commande : elle prépare un espace de travail, et tout le reste se passe dans ta CLI de codage IA (voir Utilisation plus bas), pas via ce binaire.
 
 **Laquelle utiliser ?**
 - `npx @santifer/career-ops init` : idéal pour la première utilisation ; crée un dossier de projet dédié.
-- `npm i -g @santifer/career-ops` : idéal une fois que tu as un dossier de projet et que tu veux lancer les commandes career-ops directement.
+- `npm i -g @santifer/career-ops` : si tu préfères taper `career-ops init` plutôt que la forme `npx`. Il n'ajoute aucune autre commande.
 
 > **Le système est conçu pour être personnalisé par ta CLI de codage IA elle-même.** Modes, archétypes, pondérations du score, scripts de négociation : demande-lui simplement de les changer. Elle lit les mêmes fichiers qu'elle utilise, donc elle sait exactement quoi éditer.
 

@@ -268,11 +268,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-Bu, `career-ops` ikilisini global olarak kurar; böylece `npx` yerine doğrudan çalıştırabilirsin. Bir proje dizini oluşturan `npx @santifer/career-ops init`'ten farklı olarak, global kurulum terminalinin her yerinde kullanılabilen kalıcı bir `career-ops` komutu verir.
+Bu, `career-ops` ikilisini global olarak kurar; böylece `career-ops init [folder]` komutunu `npx` olmadan çalıştırabilirsin. `init` onun tek komutudur: bir çalışma alanı kurar, sonrasındaki her şey bu ikili üzerinden değil, yapay zekâ kodlama CLI'ının içinde gerçekleşir (aşağıda Kullanım'a bak).
 
 **Hangisini kullanmalısın?**
 - `npx @santifer/career-ops init`: ilk kullanım için en iyisi; özel bir proje klasörü oluşturur.
-- `npm i -g @santifer/career-ops`: bir proje klasörün olduğunda ve career-ops komutlarını doğrudan çalıştırmak istediğinde en iyisi.
+- `npm i -g @santifer/career-ops`: `npx` biçimi yerine `career-ops init` yazmayı tercih ediyorsan. Başka komut eklemez.
 
 > **Sistem, bizzat yapay zekâ kodlama CLI'ın tarafından özelleştirilmek üzere tasarlandı.** Modlar, arketipler, puanlama ağırlıkları, pazarlık senaryoları: değiştirmesini istemen yeterli. Kullandığı dosyaların aynısını okur, bu yüzden neyi düzenleyeceğini tam olarak bilir.
 

@@ -274,11 +274,11 @@ Chỉ đặt cờ này **khi chính proxy được cấu hình đã chặn kết
 npm i -g @santifer/career-ops
 ```
 
-Lệnh này cài binary `career-ops` ở cấp toàn cục để bạn chạy trực tiếp thay vì qua `npx`. Khác với `npx @santifer/career-ops init` (khởi tạo một thư mục dự án), cài toàn cục cho bạn một lệnh `career-ops` cố định dùng được ở bất cứ đâu trong terminal.
+Lệnh này cài binary `career-ops` ở cấp toàn cục để bạn chạy `career-ops init [folder]` mà không cần `npx`. `init` là lệnh duy nhất của nó: nó dựng một workspace, và mọi việc sau đó diễn ra bên trong AI coding CLI của bạn (xem Cách dùng bên dưới), không qua binary này.
 
 **Nên dùng cách nào?**
 - `npx @santifer/career-ops init`: tốt nhất cho lần dùng đầu; tạo một thư mục dự án riêng.
-- `npm i -g @santifer/career-ops`: tốt nhất khi bạn đã có thư mục dự án và muốn chạy trực tiếp các lệnh career-ops.
+- `npm i -g @santifer/career-ops`: nếu bạn thích gõ `career-ops init` hơn dạng `npx`. Nó không thêm lệnh nào khác.
 
 > **Hệ thống được thiết kế để chính AI coding CLI của bạn tùy chỉnh.** Mode, archetype, trọng số chấm điểm, kịch bản đàm phán -- chỉ cần nhờ nó thay đổi. Nó đọc chính những file nó dùng, nên biết chính xác cần sửa gì.
 

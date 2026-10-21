@@ -270,11 +270,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-这会全局安装 `career-ops` 二进制文件，让你可以直接运行它而不是通过 `npx`。与 `npx @santifer/career-ops init`（用来初始化一个项目目录）不同，全局安装会给你一个持久的 `career-ops` 命令，在终端的任何地方都能用。
+这会全局安装 `career-ops` 二进制文件，让你不用 `npx` 就能运行 `career-ops init [folder]`。`init` 是它唯一的命令：它只负责搭建工作区，之后的一切都在你的 AI 编码 CLI 里进行（见下方“用法”），而不是通过这个二进制文件。
 
 **该用哪个？**
 - `npx @santifer/career-ops init`：最适合首次使用；会创建一个专用的项目文件夹。
-- `npm i -g @santifer/career-ops`：最适合已有项目文件夹、想直接运行 career-ops 命令的情况。
+- `npm i -g @santifer/career-ops`：如果你更想输入 `career-ops init` 而不是 `npx` 的写法。它不会增加其他命令。
 
 > **这个系统就是设计成由你的 AI 编码 CLI 自己来定制的。** 模式、原型、评分权重、谈判话术：直接让它改就行。它读取的正是它自己使用的文件，所以它清楚该改哪里。
 

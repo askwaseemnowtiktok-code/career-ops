@@ -274,11 +274,11 @@ Set this flag **only when the configured proxy itself blocks connections to priv
 npm i -g @santifer/career-ops
 ```
 
-This installs the `career-ops` binary globally so you can run it directly instead of via `npx`. Unlike `npx @santifer/career-ops init` (which bootstraps a project directory), the global install gives you a persistent `career-ops` command available anywhere in your terminal.
+This installs the `career-ops` binary globally, so you can run `career-ops init [folder]` without `npx`. `init` is its only command: it sets up a workspace, and everything after that happens inside your AI coding CLI (see Usage below), not through this binary.
 
 **Which one should you use?**
 - `npx @santifer/career-ops init`: best for first use; creates a dedicated project folder.
-- `npm i -g @santifer/career-ops`: best once you have a project folder and want to run career-ops commands directly.
+- `npm i -g @santifer/career-ops`: if you'd rather type `career-ops init` than the `npx` form. It adds no other commands.
 
 > **The system is designed to be customized by your AI coding CLI itself.** Modes, archetypes, scoring weights, negotiation scripts -- just ask it to change them. It reads the same files it uses, so it knows exactly what to edit.
 

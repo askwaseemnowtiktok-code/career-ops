@@ -270,11 +270,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-這會全域安裝 `career-ops` 執行檔，讓你可以直接執行它而不是透過 `npx`。與 `npx @santifer/career-ops init`（用來初始化一個專案目錄）不同，全域安裝會給你一個持久的 `career-ops` 指令，在終端機的任何地方都能用。
+這會全域安裝 `career-ops` 執行檔，讓你不用 `npx` 就能執行 `career-ops init [folder]`。`init` 是它唯一的指令：它只負責建立工作區，之後的一切都在你的 AI 程式碼 CLI 裡進行（見下方「使用方式」），而不是透過這個執行檔。
 
 **該用哪一個？**
 - `npx @santifer/career-ops init`：最適合首次使用；會建立一個專用的專案資料夾。
-- `npm i -g @santifer/career-ops`：最適合已有專案資料夾、想直接執行 career-ops 指令的情況。
+- `npm i -g @santifer/career-ops`：如果你比較想輸入 `career-ops init`，而不是 `npx` 的寫法。它不會增加其他指令。
 
 > **這個系統就是設計成由你的 AI 程式碼 CLI 自己來客製的。** 模式、原型、評分權重、談判話術：直接請它改就行。它讀取的正是它自己使用的檔案，所以它清楚該改哪裡。
 

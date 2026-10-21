@@ -270,11 +270,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-Isso instala o binário `career-ops` globalmente para que você possa executá-lo diretamente em vez de via `npx`. Diferente de `npx @santifer/career-ops init` (que prepara um diretório de projeto), a instalação global dá a você um comando `career-ops` persistente, disponível em qualquer lugar do terminal.
+Isso instala o binário `career-ops` globalmente para que você possa rodar `career-ops init [folder]` sem `npx`. `init` é o único comando dele: prepara um espaço de trabalho, e todo o resto acontece dentro da sua CLI de código com IA (veja Uso abaixo), não por este binário.
 
 **Qual usar?**
 - `npx @santifer/career-ops init`: melhor para o primeiro uso; cria uma pasta de projeto dedicada.
-- `npm i -g @santifer/career-ops`: melhor quando você já tem uma pasta de projeto e quer rodar os comandos do career-ops diretamente.
+- `npm i -g @santifer/career-ops`: se você prefere digitar `career-ops init` em vez da forma com `npx`. Ele não adiciona nenhum outro comando.
 
 > **O sistema foi feito para ser personalizado pela sua própria CLI de código com IA.** Modos, arquétipos, pesos da pontuação, scripts de negociação: é só pedir para ela mudar. Ela lê os mesmos arquivos que usa, então sabe exatamente o que editar.
 

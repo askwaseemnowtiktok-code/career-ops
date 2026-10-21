@@ -268,11 +268,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-이렇게 하면 `career-ops` 바이너리가 전역으로 설치되어 `npx` 대신 직접 실행할 수 있습니다. 프로젝트 디렉터리를 만들어 주는 `npx @santifer/career-ops init`과 달리, 전역 설치는 터미널 어디서든 쓸 수 있는 영구적인 `career-ops` 명령을 제공합니다.
+이렇게 하면 `career-ops` 바이너리가 전역으로 설치되어 `npx` 없이 `career-ops init [folder]`를 실행할 수 있습니다. `init`이 유일한 명령입니다. 작업 공간을 만들 뿐이며, 그 이후의 모든 작업은 이 바이너리가 아니라 AI 코딩 CLI 안에서 이루어집니다(아래 사용법 참고).
 
 **어떤 것을 써야 할까요?**
 - `npx @santifer/career-ops init`: 처음 사용할 때 가장 좋습니다. 전용 프로젝트 폴더를 만듭니다.
-- `npm i -g @santifer/career-ops`: 프로젝트 폴더가 이미 있고 career-ops 명령을 직접 실행하고 싶을 때 가장 좋습니다.
+- `npm i -g @santifer/career-ops`: `npx` 형식보다 `career-ops init`을 입력하는 편이 좋을 때. 다른 명령은 추가되지 않습니다.
 
 > **이 시스템은 당신의 AI 코딩 CLI가 직접 커스터마이즈하도록 설계되었습니다.** 모드, 아키타입, 점수 가중치, 협상 스크립트: 바꿔 달라고 말하기만 하면 됩니다. CLI가 자신이 사용하는 파일을 그대로 읽기 때문에 무엇을 편집해야 하는지 정확히 알고 있습니다.
 

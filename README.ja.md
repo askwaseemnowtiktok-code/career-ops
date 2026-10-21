@@ -268,11 +268,11 @@ claude   # or codex / opencode / qwen / agy / grok
 npm i -g @santifer/career-ops
 ```
 
-これで `career-ops` バイナリがグローバルにインストールされ、`npx` を経由せず直接実行できます。プロジェクトディレクトリを用意する `npx @santifer/career-ops init` と違い、グローバルインストールではターミナルのどこからでも使える永続的な `career-ops` コマンドが手に入ります。
+これで `career-ops` バイナリがグローバルにインストールされ、`npx` なしで `career-ops init [folder]` を実行できます。`init` が唯一のコマンドです。ワークスペースを用意するだけで、その後の作業はすべてこのバイナリではなく AI コーディング CLI の中で行います（下の「使い方」を参照）。
 
 **どちらを使うべき？**
 - `npx @santifer/career-ops init`：初回利用に最適。専用のプロジェクトフォルダを作ります。
-- `npm i -g @santifer/career-ops`：プロジェクトフォルダがすでにあり、career-ops のコマンドを直接実行したいときに最適。
+- `npm i -g @santifer/career-ops`：`npx` 形式より `career-ops init` と打ちたい場合に。ほかのコマンドは増えません。
 
 > **このシステムは、あなたの AI コーディング CLI 自身がカスタマイズするように設計されています。** モード、アーキタイプ、スコアの重み、交渉スクリプト：変えてほしいと頼むだけです。CLI は自分が使っているファイルをそのまま読むので、何を編集すべきか正確に分かっています。
 
